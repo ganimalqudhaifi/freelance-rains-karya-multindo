@@ -1,3 +1,4 @@
+import ContactSection from "@/components/contact-section";
 import FooterSection from "@/components/footer-section";
 import HeroSection from "@/components/hero-section";
 import NavigationHeader from "@/components/navigation-header";
@@ -9,6 +10,7 @@ export default function Home() {
       <NavigationHeader />
       <HeroSection />
       <StatsSection />
+      <ContactSection />
       <FooterSection />
     </>
   );
