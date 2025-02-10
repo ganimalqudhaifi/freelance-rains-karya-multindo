@@ -1,3 +1,4 @@
+import FooterSection from "@/components/footer-section";
 import NavigationHeader from "@/components/navigation-header";
 import StatsSection from "@/components/stats-section";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <NavigationHeader />
       <StatsSection />
+      <FooterSection />
     </>
   );
 }
