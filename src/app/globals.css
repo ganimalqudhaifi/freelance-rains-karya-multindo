@@ -4,15 +4,23 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e1f24;
+  --primary: #4b62c3;
+  --primary-dark: #3b446d;
+  --accent: #f4b318;
+  --neutral: #cbcdd7;
+  --neutral-light: #f9f9fb;
+  --neutral-dark: #5d6279;
+  --black: #000000;
+  --white: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
