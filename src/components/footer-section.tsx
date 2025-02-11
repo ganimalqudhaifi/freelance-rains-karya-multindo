@@ -30,7 +30,7 @@ export default function FooterSection() {
         <ul className="flex space-x-4">
           {navigationLinks.map((link, i) => (
             <li key={i}>
-              <Link href={link.href} className="p-2.5">
+              <Link href={link.href} className="p-1 md:p-2.5">
                 {link.name}
               </Link>
             </li>
