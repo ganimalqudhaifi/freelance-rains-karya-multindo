@@ -5,6 +5,7 @@ import HeroSection from "@/components/hero-section";
 import NavigationHeader from "@/components/navigation-header";
 import ServicesSection from "@/components/services-section";
 import StatsSection from "@/components/stats-section";
+import WhatsappCTA from "@/components/whatsapp-cta";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ServicesSection />
       <ContactSection />
       <FooterSection />
+      <WhatsappCTA />
     </>
   );
 }
