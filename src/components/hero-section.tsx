@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="flex pt-8 pl-16 items-center justify-between overflow-hidden text-primary-900"
+      className="flex flex-col md:flex-row pt-8 pl-8 md:pl-16 items-center justify-between overflow-hidden text-primary-900"
       id="home"
     >
-      <div className="w-[500px] flex flex-col space-y-5">
+      <div className="w-[500px] flex flex-col space-y-5 text-center md:text-left pr-8 md:pr-0">
         <h1 className="font-bold text-4xl">
           Mewujudkan Inovasi dalam Konstruksi, Event, dan Kreativitas
         </h1>
@@ -17,7 +17,7 @@ export default function HeroSection() {
           berkomitmen memberikan layanan berkualitas dengan standar profesional
           dan inovasi modern.
         </p>
-        <div className="text-xl flex space-x-4 font-semibold">
+        <div className="text-xl flex justify-center md:justify-start space-x-4 font-semibold">
           <Link
             href="#services"
             className="px-4 py-2 bg-primary-dark text-neutral-light rounded-lg duration-300 hover:shadow-md hover:bg-primary-600"
@@ -37,7 +37,7 @@ export default function HeroSection() {
         width={595}
         height={897}
         alt="hero image"
-        className="-mb-1"
+        className="-mb-1 pt-10 md:pt-0"
       />
     </section>
   );
