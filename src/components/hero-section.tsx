@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="flex pt-8 pl-16 items-center justify-between overflow-hidden"
+      className="flex pt-8 pl-16 items-center justify-between overflow-hidden text-primary-900"
       id="home"
     >
       <div className="w-[500px] flex flex-col space-y-5">
@@ -17,16 +17,16 @@ export default function HeroSection() {
           berkomitmen memberikan layanan berkualitas dengan standar profesional
           dan inovasi modern.
         </p>
-        <div className="text-xl flex space-x-5 font-semibold">
+        <div className="text-xl flex space-x-4 font-semibold">
           <Link
             href="#services"
-            className="px-5 py-2.5 bg-primary-dark text-neutral-light rounded-lg duration-300 hover:shadow-md hover:bg-primary-600"
+            className="px-4 py-2 bg-primary-dark text-neutral-light rounded-lg duration-300 hover:shadow-md hover:bg-primary-600"
           >
             Lihat Layanan
           </Link>
           <Link
             href="#contact"
-            className="px-5 py-2.5 bg-neutral-light text-primary-dark border border-neutral rounded-lg duration-300 hover:bg-neutral-400 hover:shadow-md"
+            className="px-4 py-2 bg-neutral-light text-primary-dark border border-neutral rounded-lg duration-300 hover:bg-neutral-400 hover:shadow-md"
           >
             Hubungi Kami
           </Link>
