@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="flex pt-8 pl-16 items-center justify-between overflow-hidden">
+    <section
+      className="flex pt-8 pl-16 items-center justify-between overflow-hidden"
+      id="home"
+    >
       <div className="w-[500px] flex flex-col space-y-5">
         <h1 className="font-bold text-4xl">
           Mewujudkan Inovasi dalam Konstruksi, Event, dan Kreativitas
@@ -17,13 +20,13 @@ export default function HeroSection() {
         <div className="text-xl flex space-x-5 font-semibold">
           <Link
             href="#services"
-            className="px-5 py-2.5 bg-primary-dark text-neutral-light rounded-lg"
+            className="px-5 py-2.5 bg-primary-dark text-neutral-light rounded-lg duration-300 hover:shadow-md hover:bg-primary-600"
           >
             Lihat Layanan
           </Link>
           <Link
             href="#contact"
-            className="px-5 py-2.5 bg-neutral-light text-primary-dark border border-neutral rounded-lg"
+            className="px-5 py-2.5 bg-neutral-light text-primary-dark border border-neutral rounded-lg duration-300 hover:bg-neutral-400 hover:shadow-md"
           >
             Hubungi Kami
           </Link>

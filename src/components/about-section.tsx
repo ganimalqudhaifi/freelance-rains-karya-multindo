@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <div className="p-16 flex flex-col items-center">
+    <div className="p-16 flex flex-col items-center" id="about">
       <div className="text-center w-9/12">
         <h2 className="text-3xl font-semibold">Tentang Kami</h2>
         <p className="text-lg mt-4">

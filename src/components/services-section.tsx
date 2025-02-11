@@ -41,7 +41,10 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <div className="p-16 flex flex-col items-center text-primary-900 text-lg">
+    <div
+      className="p-16 flex flex-col items-center text-primary-900 text-lg"
+      id="services"
+    >
       <h2 className="font-bold text-3xl text-center">Layanan & Produk Kami</h2>
       <p className="text-center mt-4 text-neutral-dark">
         Bersama Rains Karya Multindo, wujudkan proyek Anda dengan kualitas dan

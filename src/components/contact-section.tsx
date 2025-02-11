@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export default function ContactSection() {
   return (
-    <div className="relative flex space-x-32 p-16 bg-cover bg-[url(/contact-background.jpg)] text-neutral-light after:content-[''] after:absolute after:inset-0 after:bg-black after:opacity-70 after:z-0">
+    <div
+      className="relative flex space-x-32 p-16 bg-cover bg-[url(/contact-background.jpg)] text-neutral-light after:content-[''] after:absolute after:inset-0 after:bg-black after:opacity-70 after:z-0"
+      id="contact"
+    >
       <div className="shrink-0 w-1/3 relative z-10 flex flex-col space-y-8">
         <h2 className="text-4xl font-bold">
           Butuh Konsultasi..?
