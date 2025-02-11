@@ -13,6 +13,10 @@ export default {
         foreground: "var(--foreground)",
         primary: {
           DEFAULT: "var(--primary)",
+          "100": "var(--primary-100)",
+          "200": "var(--primary-200)",
+          "800": "var(--primary-800)",
+          "900": "var(--primary-900)",
           dark: "var(--primary-dark)",
         },
         neutral: {
