@@ -50,7 +50,7 @@ export default function ServicesSection() {
         Bersama Rains Karya Multindo, wujudkan proyek Anda dengan kualitas dan
         profesionalisme terbaik!
       </p>
-      <div className="grid grid-cols-2 mt-12 gap-12 justify-center max-w-[1040px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-12 gap-12 justify-center max-w-[1040px]">
         {services.map((service, i) => (
           <div
             className="flex flex-col text-center items-center justify-start space-y-2.5"
