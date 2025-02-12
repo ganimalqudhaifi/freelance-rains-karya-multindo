@@ -2,10 +2,38 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Rains Karya Multindo",
+  title: "Rains Karya Multindo - Konstruksi, Event Organizer, Creative Agency",
   description:
-    "Rains Karya Multindo adalah perusahaan yang bergerak di bidang konstruksi, event organizer, creative agency, dan pengadaan barang. Dengan pengalaman dan profesionalisme, kami berkomitmen untuk memberikan layanan terbaik yang selaras dengan perkembangan teknologi dan kebutuhan industri modern.",
+    "Rains Karya Multindo adalah perusahaan yang bergerak di bidang konstruksi, event organizer, creative agency, dan pengadaan barang. Kami berkomitmen memberikan layanan berkualitas tinggi dengan inovasi teknologi terkini.",
+  keywords: [
+    "Jasa Konstruksi",
+    "Event Organizer",
+    "Creative Agency",
+    "Pengadaan Barang",
+    "Pembangunan Gedung",
+    "Instalasi Listrik",
+    "Fotografi Profesional",
+    "Desain Interior",
+    "Renovasi Rumah",
+  ].join(", "),
   icons: "/favicon.svg",
+  openGraph: {
+    type: "website",
+    url: "https://rainskaryamultindo.com",
+    siteName: "Rains Karya Multindo",
+    title:
+      "Rains Karya Multindo - Konstruksi, Event Organizer, Creative Agency",
+    description:
+      "Rains Karya Multindo adalah perusahaan yang bergerak di bidang konstruksi, event organizer, creative agency, dan pengadaan barang.",
+    // images: [
+    //   {
+    //     url: "https://rainskaryamultindo.com/thumbnail.jpg",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Rains Karya Multindo Thumbnail",
+    //   },
+    // ],
+  },
 };
 
 export default function RootLayout({
