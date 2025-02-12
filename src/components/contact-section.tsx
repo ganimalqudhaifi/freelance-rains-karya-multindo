@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import EmailCTA from "./email-cta";
 
 export default function ContactSection() {
   return (
@@ -39,7 +40,7 @@ export default function ContactSection() {
                 alt="phone icon"
                 className="size-6"
               />
-              <p>0878-6229-6446</p>
+              <p>0821-3800-0629</p>
             </div>
             <div className="flex items-start space-x-4">
               <Image
@@ -49,7 +50,16 @@ export default function ContactSection() {
                 alt="envelope icon"
                 className="size-6 mt-1"
               />
-              <p>rains.km.management@gmail.com rainskaryamultindo@gmail.com</p>
+              <div className="flex flex-col">
+                <EmailCTA
+                  email="rains.km.management@gmail.com"
+                  label="rains.km.management@gmail.com"
+                />
+                <EmailCTA
+                  email="rainskaryamultindo@gmail.com"
+                  label="rainskaryamultindo@gmail.com"
+                />
+              </div>
             </div>
           </div>
         </div>
