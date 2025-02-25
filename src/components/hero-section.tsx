@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="flex flex-col md:flex-row pt-8 pl-8 md:pl-16 items-center justify-between overflow-hidden text-primary-900"
+      className="flex flex-col md:flex-row pt-8 pl-8 md:pl-16 items-start justify-between overflow-hidden md:overflow-visible text-primary-900"
       id="home"
     >
-      <div className="w-full md:w-[500px] flex flex-col space-y-5 text-center md:text-left pr-8 md:pr-0">
+      <div className="md:sticky md:top-[220px] md:mb-36 w-full md:w-[500px] flex flex-col space-y-5 text-center md:text-left pr-8 md:pr-0">
         <h1 className="font-bold text-4xl">
           Mewujudkan Inovasi dalam Konstruksi, Event, dan Kreativitas
         </h1>
