@@ -28,8 +28,9 @@ export default function ContactSection() {
                 className="size-8"
               />
               <p>
-                Jl. Jaya 25, RT.3/RW.10, Cengkareng Bar., Kecamatan Cengkareng,
-                Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11730
+                Jl. Jaya 25 No.2B1, RT.3/RW.10, Cengkareng Bar., Kecamatan
+                Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta
+                11730
               </p>
             </div>
             <div className="flex items-start space-x-4">
