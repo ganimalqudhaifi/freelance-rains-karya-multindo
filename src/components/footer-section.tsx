@@ -6,12 +6,13 @@ const navigationLinks = [
   { name: "About", href: "/#about" },
   { name: "Services", href: "/#services" },
   { name: "Portfolio", href: "/portfolio" },
+  { name: "Profile", href: "/profile" },
   { name: "Contact", href: "/#contact" },
 ];
 
 export default function FooterSection() {
   return (
-    <div className="px-8 py-12 text-neutral-dark text-center flex flex-col space-y-10 items-center">
+    <div className="px-8 py-12 text-neutral-dark text-center flex flex-col space-y-10 items-center overflow-hidden">
       <div className="flex flex-col space-y-8 items-center">
         <Image
           src="/logo.png"
@@ -27,7 +28,7 @@ export default function FooterSection() {
           memberikan layanan terbaik yang selaras dengan perkembangan teknologi
           dan kebutuhan industri modern.
         </p>
-        <ul className="flex space-x-4">
+        <ul className="flex flex-wrap gap-4 justify-center items-center">
           {navigationLinks.map((link, i) => (
             <li key={i}>
               <Link href={link.href} className="p-1 md:p-2.5">
