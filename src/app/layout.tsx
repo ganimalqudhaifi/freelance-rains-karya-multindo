@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NavigationHeader from "@/components/navigation-header";
+import FooterSection from "@/components/footer-section";
+import WhatsappCTA from "@/components/whatsapp-cta";
 
 export const metadata: Metadata = {
   title: "Rains Karya Multindo - Konstruksi, Event Organizer, Creative Agency",
@@ -43,7 +46,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        <NavigationHeader />
+        {children}
+        <FooterSection />
+        <WhatsappCTA />
+      </body>
     </html>
   );
 }
