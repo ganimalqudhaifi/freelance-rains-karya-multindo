@@ -22,20 +22,20 @@ export const metadata: Metadata = {
   icons: "/favicon.svg",
   openGraph: {
     type: "website",
-    url: "https://rainskaryamultindo.com",
+    url: "https://rains-km.co.id",
     siteName: "Rains Karya Multindo",
     title:
       "Rains Karya Multindo - Konstruksi, Event Organizer, Creative Agency",
     description:
       "Rains Karya Multindo adalah perusahaan yang bergerak di bidang konstruksi, event organizer, creative agency, dan pengadaan barang.",
-    // images: [
-    //   {
-    //     url: "https://rainskaryamultindo.com/thumbnail.jpg",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Rains Karya Multindo Thumbnail",
-    //   },
-    // ],
+    images: [
+      {
+        url: "https://rains-km.co.id/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Rains Karya Multindo Thumbnail",
+      },
+    ],
   },
 };
 

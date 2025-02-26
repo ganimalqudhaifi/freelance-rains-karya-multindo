@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /dashboard
 
-Sitemap: https://rainskaryamultindo.com/sitemap.xml
+Sitemap: https://rains-km.co.id/sitemap.xml
