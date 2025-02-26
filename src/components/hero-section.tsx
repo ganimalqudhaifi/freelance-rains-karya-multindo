@@ -32,13 +32,15 @@ export default function HeroSection() {
           </Link>
         </div>
       </div>
-      <Image
-        src="/hero.png"
-        width={595}
-        height={897}
-        alt="hero image"
-        className="-mb-1 pt-10 md:pt-0"
-      />
+      <div className="overflow-hidden">
+        <Image
+          src="/hero.png"
+          width={595}
+          height={897}
+          alt="hero image"
+          className="-mb-1 pt-10 md:pt-0"
+        />
+      </div>
     </section>
   );
 }
