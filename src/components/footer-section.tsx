@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navigationLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Services", href: "/#services" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function FooterSection() {
