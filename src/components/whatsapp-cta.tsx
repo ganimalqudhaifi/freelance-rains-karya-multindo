@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import CustomImage from "./custom-image";
 
 export default function WhatsappCTA() {
   return (
@@ -8,7 +8,7 @@ export default function WhatsappCTA() {
       target="_blank"
       className="fixed bottom-6 right-4 md:bottom-8 md:right-6 shadow-inherit z-50"
     >
-      <Image
+      <CustomImage
         src="/icons/icon-whatsapp.png"
         alt=""
         width={512}

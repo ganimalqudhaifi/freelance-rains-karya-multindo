@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import CustomImage from "./custom-image";
 
 const navigationLinks = [
   { name: "Home", href: "/#home" },
@@ -20,7 +20,7 @@ export default function NavigationHeader() {
     <nav className="relative border-b border-neutral-400 md:border-0">
       <div className="flex items-center justify-between mx-auto p-4 md:p-8 lg:px-16">
         <div>
-          <Image
+          <CustomImage
             src="/logo.png"
             alt="logo"
             width={1460}

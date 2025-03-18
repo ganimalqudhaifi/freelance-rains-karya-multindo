@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import CustomImage from "./custom-image";
 
 export default function HeroSection() {
   return (
@@ -33,7 +33,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="overflow-hidden">
-        <Image
+        <CustomImage
           src="/hero.png"
           width={595}
           height={897}

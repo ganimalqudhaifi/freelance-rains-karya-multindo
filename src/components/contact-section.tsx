@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import EmailCTA from "./email-cta";
+import CustomImage from "./custom-image";
 
 export default function ContactSection() {
   return (
@@ -20,7 +20,7 @@ export default function ContactSection() {
           <h3 className="text-lg font-semibold">Kontak</h3>
           <div className="flex flex-col space-y-3 mt-4">
             <div className="flex items-start space-x-4">
-              <Image
+              <CustomImage
                 src="/icons/icon-map.svg"
                 width={24}
                 height={24}
@@ -34,7 +34,7 @@ export default function ContactSection() {
               </p>
             </div>
             <div className="flex items-start space-x-4">
-              <Image
+              <CustomImage
                 src="/icons/icon-phone.svg"
                 width={24}
                 height={24}
@@ -44,7 +44,7 @@ export default function ContactSection() {
               <p>0821-3800-0629</p>
             </div>
             <div className="flex items-start space-x-4">
-              <Image
+              <CustomImage
                 src="/icons/icon-envelope.svg"
                 width={24}
                 height={24}
@@ -71,7 +71,7 @@ export default function ContactSection() {
               href="https://youtube.com/@rainskaryamultindo"
               target="_blank"
             >
-              <Image
+              <CustomImage
                 src="/icons/icon-youtube.svg"
                 width={24}
                 height={24}
@@ -80,7 +80,7 @@ export default function ContactSection() {
               />
             </Link>
             <Link href="https://www.tiktok.com/@rains_km" target="_blank">
-              <Image
+              <CustomImage
                 src="/icons/icon-tiktok.svg"
                 width={24}
                 height={24}
@@ -89,7 +89,7 @@ export default function ContactSection() {
               />
             </Link>
             <Link href="https://www.instagram.com/rains_km" target="_blank">
-              <Image
+              <CustomImage
                 src="/icons/icon-instagram.svg"
                 width={24}
                 height={24}

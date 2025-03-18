@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import CustomImage from "./custom-image";
 
 const navigationLinks = [
   { name: "Home", href: "/#home" },
@@ -14,7 +14,7 @@ export default function FooterSection() {
   return (
     <div className="px-8 py-12 text-neutral-dark text-center flex flex-col space-y-10 items-center overflow-hidden">
       <div className="flex flex-col space-y-8 items-center">
-        <Image
+        <CustomImage
           src="/logo.png"
           alt="logo"
           width={1460}

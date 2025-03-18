@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import portfolioItems from "@/data/portfolioItems.json";
+import CustomImage from "./custom-image";
 
 export default function PortfolioSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -70,7 +70,7 @@ export default function PortfolioSection() {
             .filter((item) => item.category === btns[activeIndex])
             .map((item, index) => (
               <div key={index} className="relative">
-                <Image
+                <CustomImage
                   width={854}
                   height={570}
                   src={item.image}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomImage from "./custom-image";
 
 const services = [
   {
@@ -57,7 +57,7 @@ export default function ServicesSection() {
             key={i}
           >
             <div className="bg-primary-100 w-fit p-3.5 rounded-full">
-              <Image
+              <CustomImage
                 src={service.iconPath}
                 alt=""
                 width={24}

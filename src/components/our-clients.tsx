@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomImage from "./custom-image";
 
 const clients = [
   {
@@ -27,7 +27,7 @@ export default function OurClients() {
       </p>
       <div className="grid grid-cols-2 md:px-20 md:grid-cols-6 mt-8 gap-8 md:gap-4">
         {clients.map((client) => (
-          <Image
+          <CustomImage
             key={client.name}
             src={client.image}
             width={180}

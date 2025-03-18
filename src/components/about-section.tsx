@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomImage from "./custom-image";
 
 export default function AboutSection() {
   return (
@@ -19,7 +19,7 @@ export default function AboutSection() {
       </div>
       <div className="flex flex-col md:flex-row justify-between mt-16 space-x-0 md:space-x-10">
         <div className="w-full h-full">
-          <Image
+          <CustomImage
             src="/about.jpg"
             alt="about image"
             width={1200}

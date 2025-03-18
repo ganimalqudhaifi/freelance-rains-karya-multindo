@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomImage from "./custom-image";
 
 export default function ProfileSection() {
   return (
@@ -16,7 +16,7 @@ export default function ProfileSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-4 md:gap-8 space-y-8 md:space-y-0 items-stretch mt-8 md:px-24">
         <div className="row-span-4 col-span-2 relative rounded-lg overflow-hidden hover:scale-[1.03] duration-300">
-          <Image
+          <CustomImage
             src="/profile/director-1.jpeg"
             width={400}
             height={600}
@@ -32,7 +32,7 @@ export default function ProfileSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
         </div>
         <div className="order-last md:order-none rounded-lg overflow-hidden relative hover:scale-[1.03] duration-300">
-          <Image
+          <CustomImage
             src="/profile/workshop-1.jpeg"
             width={400}
             height={600}
@@ -48,7 +48,7 @@ export default function ProfileSection() {
           <div className="md:hidden absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
         </div>
         <div className="hidden md:block rounded-lg overflow-hidden relative hover:scale-[1.03] duration-300">
-          <Image
+          <CustomImage
             src="/profile/workshop-2.jpeg"
             width={400}
             height={600}
@@ -58,7 +58,7 @@ export default function ProfileSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
         <div className="col-span-2 row-span-3 rounded-lg overflow-hidden relative hover:scale-[1.03] duration-300">
-          <Image
+          <CustomImage
             src="/profile/team-1.jpeg"
             width={400}
             height={600}
