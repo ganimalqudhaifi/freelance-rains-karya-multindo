@@ -10,4 +10,5 @@ export default function CustomImage({
   ...props
 }: CustomImageProps) {
   return <Image {...props} alt={alt} className={className} unoptimized />;
+  // return <Image {...props} alt={alt} className={className} />;
 }
