@@ -104,7 +104,7 @@ export default function ContactSection() {
       <div className="z-10 w-full">
         <iframe
           className="w-full h-full min-h-72 border-0 rounded"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.025516345717!2d106.7190677741299!3d-6.1272685600762005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a0300413b3ae1%3A0x85c654ca73b29f14!2sRains%20Entertainment!5e0!3m2!1sid!2sid!4v1739213789627!5m2!1sid!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.025695919987!2d106.7215956!3d-6.1272444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a1d62166da771%3A0x8ae38bc17b7dc33!2sRAINS%20GROUP!5e0!3m2!1sid!2sid!4v1754743272501!5m2!1sid!2sid"
           loading="lazy"
           allowFullScreen
         ></iframe>
