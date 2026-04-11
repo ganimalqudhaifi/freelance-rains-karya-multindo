@@ -3,21 +3,21 @@ import CustomImage from "./custom-image";
 const services = [
   {
     iconPath: "/icons/icon-tools.svg",
-    title: "Konstruksi Sipil",
+    title: "Design & Konstruksi",
     description:
-      "Kami menyediakan layanan konstruksi sipil yang mencakup konsultasi, pembangunan rumah dan ruangan, renovasi bangunan, serta pengecatan gedung atau lapangan dengan teknik epoxy untuk hasil yang tahan lama dan berkualitas.",
+      "Kami menyediakan layanan terpadu mulai dari konsultasi desain exterior dan interior, pembangunan rumah tinggal maupun kantor, renovasi dan remodeling bangunan, pekerjaan finishing seperti pengecatan dan epoxy, hingga instalasi serta sistem kelistrikan untuk berbagai skala, sehingga cocok untuk kebutuhan pembangunan baru, renovasi, maupun peningkatan fasilitas secara menyeluruh.",
   },
   {
     iconPath: "/icons/icon-sofa.svg",
-    title: "Konstruksi Interior",
+    title: "Rumah Tinggal & Kantor",
     description:
-      "Membantu menciptakan ruang yang nyaman dan fungsional melalui layanan konsultasi desain interior, pembangunan interior ruangan, serta pembuatan kitchen set yang disesuaikan dengan kebutuhan pelanggan.",
+      "Kami membantu mewujudkan hunian dan ruang kerja yang nyaman, fungsional, dan estetis melalui pembangunan dari nol, renovasi rumah dan kantor, penataan ruang yang lebih efisien, serta penyesuaian desain sesuai kebutuhan dan anggaran, dengan fokus pada kenyamanan, efisiensi, dan tampilan yang profesional.",
   },
   {
     iconPath: "/icons/icon-bolt.svg",
-    title: "Konstruksi Elektrik",
+    title: "AC Service & Instalasi",
     description:
-      "Layanan kelistrikan profesional untuk berbagai skala, mulai dari konsultasi, pemasangan listrik daya besar dan kecil, penambahan daya, hingga instalasi sistem kelistrikan industri dan rumah tangga serta pemasangan penangkal petir.",
+      "Kami menyediakan layanan AC profesional yang mencakup instalasi unit baru untuk rumah dan kantor, perawatan dan pencucian rutin, perbaikan berbagai masalah seperti AC tidak dingin atau bocor, hingga bongkar pasang dan relokasi unit, dengan pengerjaan yang cepat, rapi, dan ditangani teknisi berpengalaman.",
   },
   // {
   //   iconPath: "/icons/icon-festival.svg",
@@ -29,7 +29,7 @@ const services = [
     iconPath: "/icons/icon-crane.svg",
     title: "Pengadaan Barang",
     description:
-      "Menyediakan berbagai kebutuhan bisnis dan industri, termasuk pengadaan alat tulis kantor (ATK), perlengkapan elektrik, produk kimia, hingga seragam dan garment dengan kualitas terbaik.",
+      "Kami menyediakan solusi pengadaan berbagai kebutuhan operasional bisnis dan proyek, mulai dari alat tulis kantor (ATK), peralatan elektrik dan teknikal, kebutuhan konstruksi, hingga seragam kerja dan garment, sehingga memudahkan Anda mendapatkan produk berkualitas secara praktis dan efisien.",
   },
   // {
   //   iconPath: "/icons/icon-camera.svg",
