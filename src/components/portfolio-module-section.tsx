@@ -31,7 +31,7 @@ export default function PortfolioModuleSection() {
         <Carousel opts={{ align: "start" }} className="w-full max-w-screen-md">
           <CarouselNext />
           <CarouselContent className="-ml-4 hover:cursor-pointer">
-            {Array.from({ length: 18 }).map((_, index) => (
+            {Array.from({ length: 15 }).map((_, index) => (
               <CarouselItem key={index} className="pl-4">
                 <CustomImage
                   alt=""

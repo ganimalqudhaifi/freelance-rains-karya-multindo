@@ -19,24 +19,24 @@ const services = [
     description:
       "Layanan kelistrikan profesional untuk berbagai skala, mulai dari konsultasi, pemasangan listrik daya besar dan kecil, penambahan daya, hingga instalasi sistem kelistrikan industri dan rumah tangga serta pemasangan penangkal petir.",
   },
-  {
-    iconPath: "/icons/icon-festival.svg",
-    title: "Event Organizer",
-    description:
-      "Kami siap membantu dalam perencanaan dan penyelenggaraan berbagai acara, mulai dari konser sekolah (pensi) hingga acara korporasi, dengan layanan konsultasi dan eksekusi yang profesional.",
-  },
+  // {
+  //   iconPath: "/icons/icon-festival.svg",
+  //   title: "Event Organizer",
+  //   description:
+  //     "Kami siap membantu dalam perencanaan dan penyelenggaraan berbagai acara, mulai dari konser sekolah (pensi) hingga acara korporasi, dengan layanan konsultasi dan eksekusi yang profesional.",
+  // },
   {
     iconPath: "/icons/icon-crane.svg",
     title: "Pengadaan Barang",
     description:
       "Menyediakan berbagai kebutuhan bisnis dan industri, termasuk pengadaan alat tulis kantor (ATK), perlengkapan elektrik, produk kimia, hingga seragam dan garment dengan kualitas terbaik.",
   },
-  {
-    iconPath: "/icons/icon-camera.svg",
-    title: "Creative Studio & Agency",
-    description:
-      "Mendukung kebutuhan dokumentasi dan produksi media melalui layanan fotografi dan videografi profesional, editing video dan foto, pilot drone, serta penyediaan talent entertainment dan host live untuk berbagai acara.",
-  },
+  // {
+  //   iconPath: "/icons/icon-camera.svg",
+  //   title: "Creative Studio & Agency",
+  //   description:
+  //     "Mendukung kebutuhan dokumentasi dan produksi media melalui layanan fotografi dan videografi profesional, editing video dan foto, pilot drone, serta penyediaan talent entertainment dan host live untuk berbagai acara.",
+  // },
 ];
 
 export default function ServicesSection() {
