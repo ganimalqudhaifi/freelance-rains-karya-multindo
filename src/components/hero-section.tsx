@@ -18,11 +18,18 @@ export default function HeroSection() {
           dan inovasi modern.
         </p>
         <div className="text-xl flex flex-col md:flex-row justify-center md:justify-start space-y-2 md:space-y-0 md:space-x-4 font-semibold">
-          <Link
+          {/* <Link
             href="#services"
             className="px-4 py-2 bg-primary-dark text-neutral-light rounded-lg duration-300 hover:shadow-md hover:bg-primary-600"
           >
             Lihat Layanan
+          </Link> */}
+          <Link
+            href="/files/rains-karya-multindo-company-profile.pdf"
+            download
+            className="px-4 py-2 bg-primary-dark text-neutral-light rounded-lg duration-300 hover:shadow-md hover:bg-primary-600"
+          >
+            Rains Portfolio PDF
           </Link>
           <Link
             href="#contact"
