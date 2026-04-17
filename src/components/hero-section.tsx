@@ -9,13 +9,12 @@ export default function HeroSection() {
     >
       <div className="md:sticky md:top-[220px] md:mb-36 w-full md:w-[500px] flex flex-col space-y-5 text-center md:text-left pr-8 md:pr-0">
         <h1 className="font-bold text-4xl">
-          Mewujudkan Inovasi dalam Konstruksi, Event, dan Kreativitas
+          Mewujudkan Imajinasi dalam Konstruksi Interior dan Eksterior
         </h1>
         <p className="text-xl">
-          Dari jasa konstruksi hingga event organizer dan creative agency, kami
-          hadir dengan solusi terbaik untuk kebutuhan Anda. Rains Karya Multindo
-          berkomitmen memberikan layanan berkualitas dengan standar profesional
-          dan inovasi modern.
+          Kami hadir dengan solusi terbaik untuk kebutuhan konstruksi interior
+          dan eksterior Anda. Rains Karya Multindo berkomitmen memberikan
+          layanan berkualitas dengan standar profesional dan inovasi modern.
         </p>
         <div className="text-xl flex flex-col md:flex-row justify-center md:justify-start space-y-2 md:space-y-0 md:space-x-4 font-semibold">
           {/* <Link
