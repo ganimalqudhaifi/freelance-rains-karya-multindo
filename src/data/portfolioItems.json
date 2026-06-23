@@ -1,273 +1,90 @@
-[
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-1.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-2.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-3.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-4.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-5.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-6.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-7.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-8.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-9.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-10.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-11.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-12.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-13.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-14.webp"
-  },
-  {
-    "category": "Konstruksi Elektrik",
-    "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-15.webp"
-  },
-
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/meeting-1.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/meeting-2.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/meeting-3.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/meeting-4.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/meeting-5.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/meeting-6.webp"
-  },
-
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-1.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-2.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-3.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-4.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-5.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-6.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-7.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/shop-8.webp"
-  },
-
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-1.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-2.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-3.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-4.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-5.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-6.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-7.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-8.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/studio-9.webp"
-  },
-
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/treatment-1.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/treatment-2.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/treatment-3.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/treatment-4.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/treatment-5.webp"
-  },
-
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/up-view-1.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/up-view-2.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/up-view-3.webp"
-  },
-  {
-    "category": "Konstruksi Interior",
-    "image": "/portfolio/konstruksi-interior/up-view-4.webp"
-  },
-
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-1.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-2.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-3.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-4.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-5.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-6.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-7.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-8.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-9.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-10.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-11.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-12.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-13.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-14.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-15.webp"
-  },
-  {
-    "category": "Konstruksi Sipil",
-    "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-16.webp"
-  },
-
-  {
-    "category": "Pengadaan Barang",
-    "image": "/portfolio/pengadaan-barang/pengadaan-barang-1.webp"
-  },
-  {
-    "category": "Pengadaan Barang",
-    "image": "/portfolio/pengadaan-barang/pengadaan-barang-2.webp"
-  },
-  {
-    "category": "Pengadaan Barang",
-    "image": "/portfolio/pengadaan-barang/pengadaan-barang-3.webp"
-  }
-]
+{
+  "items": [
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-1.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-2.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-3.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-4.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-5.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-6.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-7.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-8.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-9.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-10.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-11.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-12.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-13.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-14.webp" },
+    { "category": "Konstruksi Elektrik", "image": "/portfolio/konstruksi-elektrik/konstruksi-elektrik-15.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/meeting-1.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/meeting-2.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/meeting-3.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/meeting-4.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/meeting-5.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/meeting-6.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-1.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-2.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-3.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-4.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-5.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-6.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-7.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/shop-8.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-1.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-2.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-3.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-4.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-5.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-6.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-7.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-8.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/studio-9.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/treatment-1.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/treatment-2.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/treatment-3.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/treatment-4.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/treatment-5.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/up-view-1.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/up-view-2.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/up-view-3.webp" },
+    { "category": "Konstruksi Interior", "image": "/portfolio/konstruksi-interior/up-view-4.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-1.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-2.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-3.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-4.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-5.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-6.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-7.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-8.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-9.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-10.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-11.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-12.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-13.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-14.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-15.webp" },
+    { "category": "Konstruksi Sipil", "image": "/portfolio/konstruksi-sipil/konstruksi-sipil-16.webp" },
+    { "category": "Pengadaan Barang", "image": "/portfolio/pengadaan-barang/pengadaan-barang-1.webp" },
+    { "category": "Pengadaan Barang", "image": "/portfolio/pengadaan-barang/pengadaan-barang-2.webp" },
+    { "category": "Pengadaan Barang", "image": "/portfolio/pengadaan-barang/pengadaan-barang-3.webp" }
+  ],
+  "carousel": [
+    { "image": "/portfolio/rains-group-portfolio-1.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-2.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-3.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-4.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-5.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-6.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-7.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-8.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-9.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-10.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-11.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-12.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-13.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-14.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-15.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-16.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-17.jpg" },
+    { "image": "/portfolio/rains-group-portfolio-18.jpg" }
+  ]
+}

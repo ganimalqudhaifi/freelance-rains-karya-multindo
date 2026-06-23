@@ -77,7 +77,7 @@ export default function HeroSection() {
               className="group inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary-200 bg-white px-7 py-3.5 text-base font-semibold text-primary-800 transition-all duration-300 hover:border-primary-300 hover:bg-primary-50 sm:w-auto"
             >
               <Download className="size-5 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5" />
-              Company Profile
+              Profil Perusahaan
             </Link>
           </div>
 
@@ -113,15 +113,17 @@ export default function HeroSection() {
           </div>
 
           {/* Floating stat card */}
-          <div className="absolute -bottom-6 left-1/2 flex -translate-x-1/2 animate-float items-center gap-3 rounded-2xl border border-neutral-400 bg-white/95 px-5 py-3 shadow-card backdrop-blur lg:left-auto lg:right-6 lg:translate-x-0">
-            <span className="font-display text-3xl font-bold text-primary-700">
-              100<span className="text-gold-500">+</span>
-            </span>
-            <span className="text-left text-xs font-medium leading-tight text-neutral-dark">
-              Proyek
-              <br />
-              Terselesaikan
-            </span>
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0">
+            <div className="flex animate-float items-center gap-3 rounded-2xl border border-neutral-400 bg-white/95 px-5 py-3 shadow-card backdrop-blur">
+              <span className="font-display text-3xl font-bold text-primary-700">
+                100<span className="text-gold-500">+</span>
+              </span>
+              <span className="text-left text-xs font-medium leading-tight text-neutral-dark">
+                Proyek
+                <br />
+                Terselesaikan
+              </span>
+            </div>
           </div>
         </div>
       </div>

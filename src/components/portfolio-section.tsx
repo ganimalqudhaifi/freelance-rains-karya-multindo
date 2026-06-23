@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import CustomImage from "./custom-image";
-import portfolioItems from "@/data/portfolioItems.json";
+import portfolioData from "@/data/portfolioItems.json";
+const portfolioItems = portfolioData.items;
 import Modal from "./modal";
 import Reveal from "./reveal";
 import { cn } from "@/lib/utils";
@@ -94,7 +95,7 @@ export default function PortfolioSection() {
       </section>
 
       {modalImage && (
-        <Modal onClose={() => setModalImage(null)}>
+        <Modal onClose={() => setModalImage(null)} aria-label="Portfolio Rains Karya Multindo">
           <CustomImage
             src={modalImage}
             width={1200}

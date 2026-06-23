@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type Animation = "fade-up" | "fade-in" | "scale-in";
@@ -12,10 +12,6 @@ interface RevealProps {
   animation?: Animation;
   /** Delay in ms before the animation starts (used for staggering). */
   delay?: number;
-  /** Render as a different element (e.g. "li", "section"). Defaults to div. */
-  as?: "div" | "section" | "li" | "span";
-  /** Only animate the first time it enters the viewport. */
-  once?: boolean;
 }
 
 const hiddenByAnimation: Record<Animation, string> = {
@@ -30,32 +26,52 @@ const animateClass: Record<Animation, string> = {
   "scale-in": "animate-scale-in",
 };
 
+/**
+ * Scroll-triggered entrance animation.
+ *
+ * Server-renders visible (opacity-1, no transform) for SEO and no-JS.
+ * On the client:
+ *  – if already in the viewport → skip animation, stay visible.
+ *  – if below the fold → hide it, then the IntersectionObserver fires the
+ *    animation when the user scrolls to it.
+ *
+ * Once the animation finishes the CSS class is removed so that
+ * fill-mode does not override author-level hover transforms etc.
+ */
 export default function Reveal({
   children,
   className,
   animation = "fade-up",
   delay = 0,
-  as = "div",
-  once = true,
 }: RevealProps) {
-  const ref = useRef<HTMLElement | null>(null);
-  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [visible, setVisible] = useState(true); // SSR-safe: always visible
+  const [finished, setFinished] = useState(false);
+
+  const onAnimationEnd = useCallback(() => setFinished(true), []);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
 
-    // Reduced motion is honored globally via the prefers-reduced-motion CSS
-    // rule (animation/transition durations collapse to ~0), so the observer
-    // still toggles visibility but the reveal appears instantly.
+    // Check if the element is already in or near the viewport.
+    const rect = node.getBoundingClientRect();
+    const isInViewport = rect.top < window.innerHeight + 100;
+
+    if (isInViewport) {
+      // Already visible — keep visible, no hiding needed.
+      return;
+    }
+
+    // Below the fold — hide until scrolled into view.
+    setVisible(false);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setVisible(true);
-            if (once) observer.unobserve(entry.target);
-          } else if (!once) {
-            setVisible(false);
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -64,21 +80,24 @@ export default function Reveal({
 
     observer.observe(node);
     return () => observer.disconnect();
-  }, [once]);
-
-  const Tag = as as React.ElementType;
+  }, []);
 
   return (
-    <Tag
+    <div
       ref={ref}
-      style={visible ? { animationDelay: `${delay}ms` } : undefined}
+      style={visible && !finished ? { animationDelay: `${delay}ms` } : undefined}
+      onAnimationEnd={onAnimationEnd}
       className={cn(
         "will-change-transform",
-        visible ? animateClass[animation] : hiddenByAnimation[animation],
+        visible
+          ? finished
+            ? "opacity-100"
+            : animateClass[animation]
+          : hiddenByAnimation[animation],
         className
       )}
     >
       {children}
-    </Tag>
+    </div>
   );
 }

@@ -1,5 +1,6 @@
 import CustomImage from "./custom-image";
 import Reveal from "./reveal";
+import { cn } from "@/lib/utils";
 
 export default function ProfileSection() {
   return (
@@ -8,7 +9,7 @@ export default function ProfileSection() {
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="eyebrow">
             <span className="h-px w-6 bg-gold-500" />
-            Company Profile
+            Profil Perusahaan
             <span className="h-px w-6 bg-gold-500" />
           </span>
           <h1 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary-900 md:text-5xl">
@@ -39,7 +40,7 @@ export default function ProfileSection() {
             />
             <ProfileCard
               src="/profile/team-1.jpeg"
-              label="Our Team"
+              label="Tim Kami"
               className="md:col-span-2"
             />
           </div>
@@ -62,7 +63,7 @@ function ProfileCard({
 }) {
   return (
     <div
-      className={`group relative min-h-[16rem] overflow-hidden rounded-2xl shadow-soft ring-1 ring-primary-900/5 ${className}`}
+      className={cn("group relative min-h-[16rem] overflow-hidden rounded-2xl shadow-soft ring-1 ring-primary-900/5", className)}
     >
       <CustomImage
         src={src}

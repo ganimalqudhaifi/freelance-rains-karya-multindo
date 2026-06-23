@@ -5,8 +5,6 @@ import { useEffect, useRef, useState } from "react";
 interface CountUpProps {
   /** Numeric target to count toward. */
   value: number;
-  /** Text rendered after the number, e.g. "+". */
-  suffix?: string;
   /** Animation duration in ms. */
   duration?: number;
   className?: string;
@@ -14,20 +12,22 @@ interface CountUpProps {
 
 export default function CountUp({
   value,
-  suffix = "",
   duration = 1800,
   className,
 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [display, setDisplay] = useState(0);
   const started = useRef(false);
+  const rafId = useRef<number | null>(null);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
 
+    // Allow re-animation when value/duration changes.
+    started.current = false;
+
     const reduceMotion =
-      typeof window !== "undefined" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const observer = new IntersectionObserver(
@@ -50,9 +50,11 @@ export default function CountUp({
               const eased =
                 progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
               setDisplay(Math.round(eased * value));
-              if (progress < 1) requestAnimationFrame(tick);
+              if (progress < 1) {
+                rafId.current = requestAnimationFrame(tick);
+              }
             };
-            requestAnimationFrame(tick);
+            rafId.current = requestAnimationFrame(tick);
             observer.unobserve(entry.target);
           }
         });
@@ -61,13 +63,17 @@ export default function CountUp({
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (rafId.current !== null) {
+        cancelAnimationFrame(rafId.current);
+      }
+    };
   }, [value, duration]);
 
   return (
     <span ref={ref} className={className}>
       {display}
-      {suffix}
     </span>
   );
 }

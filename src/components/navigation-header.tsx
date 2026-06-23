@@ -7,11 +7,11 @@ import CustomImage from "./custom-image";
 import { cn } from "@/lib/utils";
 
 const navigationLinks = [
-  { name: "Home", href: "/#home" },
-  { name: "About", href: "/#about" },
-  { name: "Services", href: "/#services" },
+  { name: "Beranda", href: "/#home" },
+  { name: "Tentang", href: "/#about" },
+  { name: "Layanan", href: "/#services" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Profile", href: "/profile" },
+  { name: "Profil", href: "/profile" },
 ];
 
 export default function NavigationHeader() {
@@ -26,10 +26,19 @@ export default function NavigationHeader() {
   }, []);
 
   // Lock body scroll while the mobile menu is open.
+  // Also release the lock when the viewport resizes above the md breakpoint
+  // (where the mobile menu is hidden).
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
+    const updateLock = () => {
+      const isDesktop = window.innerWidth >= 768;
+      document.body.style.overflow =
+        isOpen && !isDesktop ? "hidden" : "";
+    };
+    updateLock();
+    window.addEventListener("resize", updateLock);
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("resize", updateLock);
     };
   }, [isOpen]);
 

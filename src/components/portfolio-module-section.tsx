@@ -12,10 +12,12 @@ import {
 } from "./ui/carousel";
 import Modal from "./modal";
 import Reveal from "./reveal";
+import portfolioData from "@/data/portfolioItems.json";
+
+const carouselItems = portfolioData.carousel;
 
 export default function PortfolioModuleSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [index, setIndex] = useState(0);
+  const [selected, setSelected] = useState<{ src: string; index: number } | null>(null);
 
   return (
     <>
@@ -50,22 +52,19 @@ export default function PortfolioModuleSection() {
           <Reveal animation="fade-in" className="mt-12">
             <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent className="-ml-4">
-                {Array.from({ length: 15 }).map((_, i) => (
+                {carouselItems.map((item, i) => (
                   <CarouselItem
                     key={i}
                     className="pl-4 sm:basis-1/2 lg:basis-1/3"
                   >
                     <button
-                      onClick={() => {
-                        setIsModalOpen(true);
-                        setIndex(i + 1);
-                      }}
+                      onClick={() => setSelected({ src: item.image, index: i })}
                       className="group relative block w-full overflow-hidden rounded-2xl shadow-soft ring-1 ring-primary-900/5"
                       aria-label={`Perbesar gambar portfolio ${i + 1}`}
                     >
                       <CustomImage
                         alt={`Portfolio Rains Karya Multindo ${i + 1}`}
-                        src={`/portfolio/rains-group-portfolio-${i + 1}.jpg`}
+                        src={item.image}
                         width={1200}
                         height={800}
                         className="aspect-[4/3] h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
@@ -85,11 +84,11 @@ export default function PortfolioModuleSection() {
         </div>
       </section>
 
-      {isModalOpen && (
-        <Modal onClose={() => setIsModalOpen(false)}>
+      {selected && (
+        <Modal onClose={() => setSelected(null)} aria-label="Portfolio Rains Karya Multindo">
           <CustomImage
-            alt={`Portfolio Rains Karya Multindo ${index}`}
-            src={`/portfolio/rains-group-portfolio-${index}.jpg`}
+            alt={`Portfolio Rains Karya Multindo ${selected.index + 1}`}
+            src={selected.src}
             width={1200}
             height={800}
             className="rounded-lg"

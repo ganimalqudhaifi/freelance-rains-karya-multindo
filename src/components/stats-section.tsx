@@ -26,7 +26,7 @@ export default function StatsSection() {
               className="group text-center"
             >
               <div className="font-display text-5xl font-bold tracking-tight text-white md:text-6xl">
-                <CountUp value={stat.value} suffix="" />
+                <CountUp value={stat.value} />
                 <span className="text-gold-500">{stat.suffix}</span>
               </div>
               <div className="mx-auto mt-3 h-px w-10 bg-gold-500/60 transition-all duration-300 group-hover:w-16" />
