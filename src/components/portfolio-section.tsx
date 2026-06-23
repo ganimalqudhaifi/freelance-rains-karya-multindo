@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import CustomImage from "./custom-image";
 import portfolioData from "@/data/portfolioItems.json";
 const portfolioItems = portfolioData.items;
@@ -13,8 +13,9 @@ export default function PortfolioSection() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [modalImage, setModalImage] = useState<string | null>(null);
 
-  const filtered = portfolioItems.filter(
-    (item) => item.category === activeCategory
+  const filtered = useMemo(
+    () => portfolioItems.filter((item) => item.category === activeCategory),
+    [activeCategory]
   );
 
   return (

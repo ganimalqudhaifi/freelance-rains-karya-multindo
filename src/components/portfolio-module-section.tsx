@@ -14,8 +14,6 @@ import Modal from "./modal";
 import Reveal from "./reveal";
 import portfolioData from "@/data/portfolioItems.json";
 
-const carouselItems = portfolioData.carousel;
-
 export default function PortfolioModuleSection() {
   const [selected, setSelected] = useState<{ src: string; index: number } | null>(null);
 
@@ -52,7 +50,7 @@ export default function PortfolioModuleSection() {
           <Reveal animation="fade-in" className="mt-12">
             <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent className="-ml-4">
-                {carouselItems.map((item, i) => (
+                {portfolioData.carousel.map((item, i) => (
                   <CarouselItem
                     key={i}
                     className="pl-4 sm:basis-1/2 lg:basis-1/3"

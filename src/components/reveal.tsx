@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type Animation = "fade-up" | "fade-in" | "scale-in";
@@ -46,9 +46,6 @@ export default function Reveal({
 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(true); // SSR-safe: always visible
-  const [finished, setFinished] = useState(false);
-
-  const onAnimationEnd = useCallback(() => setFinished(true), []);
 
   useEffect(() => {
     const node = ref.current;
@@ -85,15 +82,10 @@ export default function Reveal({
   return (
     <div
       ref={ref}
-      style={visible && !finished ? { animationDelay: `${delay}ms` } : undefined}
-      onAnimationEnd={onAnimationEnd}
+      style={visible ? { animationDelay: `${delay}ms` } : undefined}
       className={cn(
         "will-change-transform",
-        visible
-          ? finished
-            ? "opacity-100"
-            : animateClass[animation]
-          : hiddenByAnimation[animation],
+        visible ? animateClass[animation] : hiddenByAnimation[animation],
         className
       )}
     >

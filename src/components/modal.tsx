@@ -13,6 +13,7 @@ export default function Modal({
 }) {
   const dialogRef = useRef<HTMLDivElement | null>(null);
   const previousActive = useRef<Element | null>(null);
+  const focusableRef = useRef<NodeListOf<HTMLElement> | null>(null);
 
   // Close on Escape.
   const handleKeyDown = useCallback(
@@ -27,6 +28,14 @@ export default function Modal({
     previousActive.current = document.activeElement;
 
     document.addEventListener("keydown", handleKeyDown);
+
+    // Cache focusable elements for the focus trap.
+    const dialog = dialogRef.current;
+    if (dialog) {
+      focusableRef.current = dialog.querySelectorAll<HTMLElement>(
+        'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+    }
 
     // Move focus into the dialog on the next frame (after mount).
     requestAnimationFrame(() => {
@@ -49,9 +58,11 @@ export default function Modal({
       const dialog = dialogRef.current;
       if (!dialog) return;
 
-      const focusable = dialog.querySelectorAll<HTMLElement>(
-        'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
-      );
+      const focusable =
+        focusableRef.current ??
+        dialog.querySelectorAll<HTMLElement>(
+          'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        );
       if (focusable.length === 0) return;
 
       const first = focusable[0];

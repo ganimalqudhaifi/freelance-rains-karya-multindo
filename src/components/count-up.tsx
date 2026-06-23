@@ -17,15 +17,11 @@ export default function CountUp({
 }: CountUpProps) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [display, setDisplay] = useState(0);
-  const started = useRef(false);
   const rafId = useRef<number | null>(null);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
-
-    // Allow re-animation when value/duration changes.
-    started.current = false;
 
     const reduceMotion =
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -33,9 +29,7 @@ export default function CountUp({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !started.current) {
-            started.current = true;
-
+          if (entry.isIntersecting) {
             // Reduced motion: jump straight to the final value.
             if (reduceMotion) {
               setDisplay(value);
