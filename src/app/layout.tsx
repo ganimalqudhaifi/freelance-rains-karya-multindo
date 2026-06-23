@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import NavigationHeader from "@/components/navigation-header";
 import FooterSection from "@/components/footer-section";
 import WhatsappCTA from "@/components/whatsapp-cta";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Rains Karya Multindo - Konstruksi, Event Organizer, Creative Agency",
@@ -45,10 +60,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body>
+    <html
+      lang="id"
+      className={`scroll-smooth ${inter.variable} ${playfair.variable}`}
+      style={{ scrollPaddingTop: "6rem" }}
+    >
+      <body className="overflow-x-hidden bg-white">
         <NavigationHeader />
-        {children}
+        <main>{children}</main>
         <FooterSection />
         <WhatsappCTA />
       </body>

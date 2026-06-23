@@ -1,89 +1,109 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import portfolioItems from "@/data/portfolioItems.json";
+import { useState } from "react";
 import CustomImage from "./custom-image";
+import portfolioItems from "@/data/portfolioItems.json";
+import Modal from "./modal";
+import Reveal from "./reveal";
+import { cn } from "@/lib/utils";
+import { Maximize2 } from "lucide-react";
 
 export default function PortfolioSection() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const activeRef = useRef(null);
+  const categories = [...new Set(portfolioItems.map((item) => item.category))];
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
+  const [modalImage, setModalImage] = useState<string | null>(null);
 
-  const btns = [...new Set(portfolioItems.map((item) => item.category))];
-
-  const handleTabClick = (index: number) => {
-    setActiveIndex(index);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-
-    handleResize(); // Check on mount
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const filtered = portfolioItems.filter(
+    (item) => item.category === activeCategory
+  );
 
   return (
-    <section className="px-4 md:px-16 py-8 flex flex-col items-center text-center">
-      <h2 className="text-4xl font-bold text-primary-900">Portfolio Kami</h2>
-      <p className="text-lg max-w-[800px] mt-6 text-primary-700">
-        Temukan berbagai proyek unggulan Rains Karya Multindo dalam bidang
-        konstruksi, event organizer, pengadaan barang, dan creative studio. Kami
-        berkomitmen memberikan solusi terbaik dengan kualitas tinggi dan inovasi
-        terbaru.
-      </p>
+    <>
+      <section className="bg-white pb-24 pt-28 md:pt-36">
+        <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <span className="eyebrow">
+              <span className="h-px w-6 bg-gold-500" />
+              Portfolio Kami
+              <span className="h-px w-6 bg-gold-500" />
+            </span>
+            <h1 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary-900 md:text-5xl">
+              Proyek Unggulan Rains Karya Multindo
+            </h1>
+            <p className="mt-5 text-lg leading-relaxed text-neutral-dark">
+              Temukan berbagai proyek dalam bidang konstruksi, pengadaan barang,
+              dan creative studio — wujud komitmen kami pada kualitas tinggi dan
+              inovasi terbaru.
+            </p>
+          </Reveal>
 
-      <div className="mt-10 flex flex-col md:flex-row bg-neutral-400 rounded-[10px] relative w-[calc(100%-32px)] md:w-[calc(100%-96px)]">
-        <div
-          ref={activeRef}
-          className={`absolute bg-white rounded-[10px] shadow duration-300 translate-y-[5px] translate-x-[5px]`}
-          style={
-            isDesktop
-              ? {
-                  width: `calc(100% / ${btns.length} - 10px)`,
-                  height: `calc(100% - 10px)`,
-                  left: `${(100 / btns.length) * activeIndex}%`,
-                }
-              : {
-                  width: `calc(100% - 10px)`,
-                  height: `calc(100% / ${btns.length} - 10px)`,
-                  top: `${(100 / btns.length) * activeIndex}%`,
-                }
-          }
-        />
-        {btns.map((tab, index) => (
-          <button
-            className="w-full bg-transparent p-2.5 z-20 text-primary-900"
-            key={index}
-            onClick={() => handleTabClick(index)}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      <div className="min-h-[calc(18rem*2)]">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10">
-          {portfolioItems
-            .filter((item) => item.category === btns[activeIndex])
-            .map((item, index) => (
-              <div key={index} className="relative">
-                <CustomImage
-                  width={854}
-                  height={570}
-                  src={item.image}
-                  alt={item.category}
-                  className="size-80 md:size-72 object-cover rounded-[10px]"
-                />
-                <div className="hidden absolute bottom-0 left-0 right-0 p-4 bg-white bg-opacity-90 rounded-b-[10px]">
-                  <p className="text-primary-900 font-bold">{item.category}</p>
-                </div>
-              </div>
+          {/* Tabs */}
+          <Reveal animation="fade-in" className="mt-12 flex flex-wrap justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={cn(
+                  "rounded-full border px-5 py-2.5 text-sm font-semibold transition-all duration-300",
+                  activeCategory === category
+                    ? "border-primary-700 bg-primary-700 text-white shadow-soft"
+                    : "border-neutral-400 bg-white text-primary-800 hover:border-primary-300 hover:bg-primary-50"
+                )}
+              >
+                {category}
+              </button>
             ))}
+          </Reveal>
+
+          {/* Grid */}
+          <div
+            key={activeCategory}
+            className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
+            {filtered.map((item, i) => (
+              <Reveal
+                key={item.image}
+                delay={(i % 8) * 60}
+                animation="scale-in"
+              >
+                <button
+                  onClick={() => setModalImage(item.image)}
+                  className="group relative block w-full overflow-hidden rounded-2xl shadow-soft ring-1 ring-primary-900/5"
+                  aria-label={`Perbesar ${item.category}`}
+                >
+                  <CustomImage
+                    width={854}
+                    height={570}
+                    src={item.image}
+                    alt={item.category}
+                    className="aspect-square h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                  <span className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/0 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <span className="absolute bottom-4 left-4 right-4 flex translate-y-2 items-center justify-between opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                    <span className="text-sm font-semibold text-white">
+                      {item.category}
+                    </span>
+                    <span className="flex size-9 items-center justify-center rounded-full bg-white/90 text-primary-800">
+                      <Maximize2 className="size-4" />
+                    </span>
+                  </span>
+                </button>
+              </Reveal>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {modalImage && (
+        <Modal onClose={() => setModalImage(null)}>
+          <CustomImage
+            src={modalImage}
+            width={1200}
+            height={800}
+            alt={activeCategory}
+            className="max-h-[80vh] w-auto rounded-lg object-contain"
+          />
+        </Modal>
+      )}
+    </>
   );
 }

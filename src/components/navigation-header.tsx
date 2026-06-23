@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import CustomImage from "./custom-image";
+import { cn } from "@/lib/utils";
 
 const navigationLinks = [
   { name: "Home", href: "/#home" },
@@ -10,74 +12,117 @@ const navigationLinks = [
   { name: "Services", href: "/#services" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Profile", href: "/profile" },
-  { name: "Contact", href: "/#contact" },
 ];
 
 export default function NavigationHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Lock body scroll while the mobile menu is open.
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="relative border-b border-neutral-400 md:border-0">
-      <div className="flex items-center justify-between mx-auto p-4 md:p-8 lg:px-16">
-        <div>
+    <header className="sticky top-0 z-50">
+      <nav
+        className={cn(
+          "mx-auto flex items-center justify-between px-4 transition-all duration-300 md:px-8 lg:px-16",
+          scrolled
+            ? "border-b border-neutral-400/80 bg-white/85 py-3 shadow-soft backdrop-blur-xl"
+            : "border-b border-transparent bg-white/0 py-4 md:py-6"
+        )}
+      >
+        <Link href="/#home" className="shrink-0" aria-label="Rains Karya Multindo — beranda">
           <CustomImage
             src="/logo.png"
-            alt="logo"
+            alt="Logo Rains Karya Multindo"
             width={1460}
             height={560}
-            className="w-24 md:w-[120px] shrink-0"
+            priority
+            className="w-24 transition-all duration-300 md:w-[120px]"
           />
-        </div>
+        </Link>
+
+        {/* Desktop links */}
+        <ul className="hidden items-center gap-9 md:flex">
+          {navigationLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                className="link-underline py-1 text-[15px] font-medium text-primary-800 transition-colors hover:text-primary-900"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop CTA */}
+        <Link
+          href="/#contact"
+          className="group hidden items-center gap-2 rounded-full bg-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all duration-300 hover:bg-primary-900 hover:shadow-card md:inline-flex"
+        >
+          Hubungi Kami
+          <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </Link>
+
+        {/* Mobile toggle */}
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          onClick={() => setIsOpen((v) => !v)}
+          className="inline-flex size-11 items-center justify-center rounded-xl text-primary-800 transition-colors hover:bg-neutral-400/60 md:hidden"
           aria-expanded={isOpen}
+          aria-label={isOpen ? "Tutup menu" : "Buka menu"}
         >
-          <svg
-            className="w-6 h-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
+          {isOpen ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
-        <div
-          className={`${
-            isOpen
-              ? "absolute left-0 top-full w-full bg-white shadow-lg transition-opacity duration-300 ease-in-out opacity-100"
-              : "hidden opacity-0"
-          } md:block md:w-auto md:relative md:opacity-100 md:shadow-none`}
-        >
-          <ul className="font-medium md:text-lg flex flex-col p-4 md:p-0 border border-gray-100 bg-gray-50 md:flex-row md:space-x-8 md:border-0 md:bg-white">
-            {navigationLinks.map((link, i) => (
-              <li key={i}>
+      </nav>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={cn(
+          "fixed inset-x-0 top-[4.5rem] z-40 origin-top px-4 transition-all duration-300 md:hidden",
+          isOpen
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-3 opacity-0"
+        )}
+      >
+        <div className="overflow-hidden rounded-2xl border border-neutral-400 bg-white shadow-card">
+          <ul className="flex flex-col p-2">
+            {navigationLinks.map((link) => (
+              <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="block py-2 px-3 text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-base font-medium text-primary-800 transition-colors hover:bg-primary-50 hover:text-primary-900"
                 >
                   {link.name}
                 </Link>
               </li>
             ))}
+            <li className="p-2">
+              <Link
+                href="/#contact"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-primary-700 px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-primary-900"
+              >
+                Hubungi Kami
+                <ArrowUpRight className="size-4" />
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
